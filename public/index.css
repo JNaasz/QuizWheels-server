@@ -1,0 +1,144 @@
+#header {
+  display: flex;
+  justify-content: center;
+}
+
+#header img {
+  height: 50px;
+  border-radius: 50px;
+}
+
+#header h1 {
+  margin-bottom: 0;
+  background-image: linear-gradient(to right, #1e04e2, #6a39ca, #d90cc8, #d90c0c, #0cd96c);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.topics {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.topics button {
+  flex: 1;
+  min-width: 120px;
+  background-color: rgb(91, 37, 142);
+  color: white;
+}
+
+.topics button.active {
+  background-color: rgb(157, 123, 189);
+}
+
+.modes {
+  display: flex;
+}
+
+.modes section {
+  width: 50%;
+}
+
+section {
+  padding: 20px;
+  border: 1px dotted lightslategrey;
+  border-top: none;
+}
+
+.u-half-width {
+  width: 50%;
+}
+
+.button-warning {
+  background-color: red;
+  color: white;
+}
+
+.button-green {
+  background-color: lightgreen;
+}
+
+.o-round h5 {
+  display: inline;
+}
+
+.questions {
+  position: relative;
+  height: 120px;
+}
+
+.questions .card {
+  flex: 1 1 0px;
+  border: 1px solid rgb(36, 0, 128);
+  text-align: center;
+  margin: 6px;
+  padding: 6px;
+  border-radius: 6px;
+  width: 200px;
+  height: 100px;
+  background-color: white;
+}
+
+.questions .card.back {
+  background-color: rgb(1, 45, 203);
+  border-color: rgb(190, 224, 232);
+}
+
+.questions .card.back div {
+  display: none;
+}
+
+.questions .card div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 2px;
+}
+
+.questions .card div.question {
+  background-color: rgb(131, 238, 238);
+}
+
+.questions .card div.answer {
+  background-color: rgb(131, 154, 238);
+}
+
+.questions .card div.hidden {
+  display: none;
+}
+
+.card {
+  position: absolute;
+}
+
+.card:last-child {
+  top: 5px;
+  left: 0;
+}
+
+.card:nth-child(1) {
+  left: 40px;
+}
+
+.card:nth-child(2) {
+  left: 60px;
+}
+
+.card:nth-child(3) {
+  left: 80px;
+}
+
+.card:nth-child(4) {
+  left: 100px;
+}
+
+.questions > :nth-child(n+5):nth-child(-n+25) {
+  left: 120px;
+}
+
+.scenarios .right {
+  text-align: right;
+  flex: 1;
+}

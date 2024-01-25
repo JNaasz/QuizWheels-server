@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuizWheels</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+  <link rel="stylesheet" href="./normalize.css">
+  <link rel="stylesheet" href="./skeleton.css">
+  <link rel="stylesheet" href="./index.css">
+
+</head>
+
+<body>
+  <div class="grid-container" id="app">
+    <section id="header">
+      <img src="ic_launcher-playstore.png"/>
+      <h1>QuizWheels</h1>
+    </section>
+    <section class="topics">
+      <button @click="setTopic(topic)"  
+      v-for="topic in topicsList"
+      :class="{ 'active': topic == selectedTopic }"
+      :value="topic">{{topic}}</button>
+    </section>
+    <section class="questions">
+      <div v-for="question in questions" class="card" @click="flipCard" 
+      :class="{ 'back': !question.currentCard }">
+        <div class="question">{{question.question}}</div>
+        <div class="answer hidden">{{question.answer}}</div>
+        <div v-if="!question.currentCard" class="back"></div>
+      </div>
+    </section>
+<div id="bottom"></div>
+  </div>
+  <script>
+    const STATES = ['replay', 'proxy', 'immediate-failure', 'refresh-failure'];
+    const AUDIO_STATES = ['replay', 'delay-5s', 'delay-10s', 'delay-20s', 'proxy', 'failure'];
+
+    const app = new Vue({
+      el: '#app',
+      data: {
+        topics: [],
+        topicsList: [],
+        questions: [],
+        selectedTopic: null,
+        selectedQuestion: null,
+      },
+      mounted() {
+        this.$nextTick(function () {
+          this.setTopics();
+
+          this.loaded = true;
+        });
+      },
+      methods: {
+        setTopics() {
+          return fetch('/topics')
+            .then(res => res.json())
+            .then(res => {
+              const topicsData = JSON.parse(res);
+              this.topics = topicsData.topics;
+              this.topicsList = topicsData.topics.map(topic => topic.title)
+              this.selectedTopic = this.topics[0].title;
+              this.setTopic(this.selectedTopic);
+            });
+        },
+        setTopic(topic) {
+          this.selectedTopic = topic;
+          const topicSelcetion = this.topics.find(t => t.title == topic);
+          this.questions = topicSelcetion.cards;
+          this.setCards();
+        },
+        flipCard(event) {
+          const parentElement = event.target.parentElement;
+          const isQuestion = event.target.classList.contains('question');
+          if (isQuestion) {
+            parentElement.children[0].classList.add('hidden');
+            parentElement.children[1].classList.remove('hidden');
+          } else {
+            parentElement.children[0].classList.remove('hidden');
+            parentElement.children[1].classList.add('hidden');
+            this.nextCard();
+          }
+          console.log('clicked to flip the card', parentElement);
+        },
+        setCards() {
+          const lastCard = this.questions.length - 1;
+          console.log({lastCard, 'length': this.questions.length});
+          this.questions[lastCard].currentCard = true;
+        },
+        nextCard() {
+          const cards = this.questions;
+          const current = cards.pop();
+          console.log(current)
+          current.currentCard = false;// [a, b, c]
+          const lastCard = this.questions.length - 1;
+          cards[lastCard].currentCard = true;
+          cards.unshift(current);
+          this.episodes = cards;
+        }
+      }
+    });
+    console.log('app', app);
+  </script>
+</body>
+
+</html>

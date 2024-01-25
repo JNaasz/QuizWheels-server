@@ -1,0 +1,345 @@
+{
+  "topics": [
+    {
+      "title": "Disney",
+      "cards": [
+        {
+          "id": 1,
+          "question": "What's the favorite dance move of the aliens in Pizza Planet??",
+          "options": [
+            {
+              "id": "a",
+              "text": "Space Hokey Pokey"
+            },
+            {
+              "id": "b",
+              "text": "The Claw Cha-Cha"
+            },
+            {
+              "id": "c",
+              "text": "Galactic Shuffle"
+            }
+          ],
+          "answer": "The Claw Cha-Cha"
+        },
+        {
+          "id": 2,
+          "question": "Why did Kanga bring a pouch to the party?",
+          "options": [
+            {
+              "id": "a",
+              "text": "To carry snacks"
+            },
+            {
+              "id": "b",
+              "text": "To store honey jars"
+            },
+            {
+              "id": "c",
+              "text": "She thought it was a potluck"
+            }
+          ],
+          "answer": "She thought it was a potluck"
+        },
+        {
+          "id": 3,
+          "question": "What's the Evil Queen's favorite app?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Fairest Filter"
+            },
+            {
+              "id": "b",
+              "text": "Poison Apple Pay"
+            },
+            {
+              "id": "c",
+              "text": "Wicked Weather"
+            }
+          ],
+          "answer": "Fairest Filter"
+        },
+        {
+          "id": 4,
+          "question": "What's Elsa's favorite type of salad?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Snow pea salad"
+            },
+            {
+              "id": "b",
+              "text": "Frozen greens"
+            },
+            {
+              "id": "c",
+              "text": "Iceberg lettuce"
+            }
+          ],
+          "answer": "Frozen greens"
+        },
+        {
+          "id": 5,
+          "question": "What is the name of the street rat in Disney's 'Aladdin' ?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Remy"
+            },
+            {
+              "id": "b",
+              "text": "Jafar"
+            },
+            {
+              "id": "c",
+              "text": "Aladdin"
+            }
+          ],
+          "answer": "Aladdin"
+        }
+      ]
+    },
+    {
+      "title": "Star Wars",
+      "cards": [
+        {
+          "id": 1,
+          "question": "Who is Luke's Father?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Obi-Wan Kenobi"
+            },
+            {
+              "id": "b",
+              "text": "Darth Vader"
+            },
+            {
+              "id": "c",
+              "text": "Han Solo"
+            }
+          ],
+          "answer": "Darth Vader",
+          "currentCard": false
+        },
+        {
+          "id": 2,
+          "question": "Who planet is Jar Jar Binks from?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Planet Roo"
+            },
+            {
+              "id": "b",
+              "text": "Planet Tahoo"
+            },
+            {
+              "id": "c",
+              "text": "Planet Naboo"
+            }
+          ],
+          "answer": "Planet Naboo",
+          "currentCard": false
+        },
+        {
+          "id": 3,
+          "question": "What does Yoda say when he plays hide and seek?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Hide and seek, I must"
+            },
+            {
+              "id": "b",
+              "text": "Found, you are!"
+            },
+            {
+              "id": "c",
+              "text": "Seek and hide, I might."
+            }
+          ],
+          "answer": "Found, you are!",
+          "currentCard": false
+        },
+        {
+          "id": 4,
+          "question": "Who is Luke Skywalker's Jedi Master?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Obi-Wan Kenobi"
+            },
+            {
+              "id": "b",
+              "text": "Mace Windu"
+            },
+            {
+              "id": "c",
+              "text": "Yoda"
+            }
+          ],
+          "answer": "Obi-Wan Kenobi",
+          "currentCard": false
+        },
+        {
+          "id": 5,
+          "question": "What is the name of Han Solo's ship?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Galactic Phoenix"
+            },
+            {
+              "id": "b",
+              "text": "Millenium Falcon"
+            },
+            {
+              "id": "c",
+              "text": "Starcruiser Omega"
+            }
+          ],
+          "answer": "Millenium Falcon",
+          "currentCard": false
+        }
+      ]
+    },
+    {
+      "title": "Marvel",
+      "cards": [
+        {
+          "question": "How does Doctor Strange order pizza??",
+          "options": [
+            {
+              "id": "a",
+              "text": "Time-traveling to the pizza parlor"
+            },
+            {
+              "id": "b",
+              "text": "Using the Eye of Agamotto app"
+            },
+            {
+              "id": "c",
+              "text": "Sending a mystical pizza summoning spell"
+            }
+          ],
+          "answer": "Using the Eye of Agamotto app"
+        },
+        {
+          "question": "What's Black Widow's secret talent?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Juggling spy gadgets"
+            },
+            {
+              "id": "b",
+              "text": "Ballet"
+            },
+            {
+              "id": "c",
+              "text": "Competitive knitting"
+            }
+          ],
+          "answer": "Competitive knitting"
+        },
+        {
+          "question": "What is Tony Stark's favorite song??",
+          "options": [
+            {
+              "id": "a",
+              "text": "Rocket Man by Elton John"
+            },
+            {
+              "id": "b",
+              "text": "Iron Man by Black Sabbath"
+            },
+            {
+              "id": "c",
+              "text": "Smooth Operator by Sade"
+            }
+          ],
+          "answer": "Iron Man by Black Sabbath"
+        },
+        {
+          "question": "What is Spider Man's favorite social media platform",
+          "options": [
+            {
+              "id": "a",
+              "text": "Webstagram"
+            },
+            {
+              "id": "b",
+              "text": "Insta-web"
+            },
+            {
+              "id": "c",
+              "text": "Snapweb"
+            }
+          ],
+          "answer": "Webstagram"
+        }
+      ]
+    },
+    {
+      "title": "DC",
+      "cards": [
+        {
+          "question": "What is Superman's favorite day of the week?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Monday(to start the week super)"
+            },
+            {
+              "id": "b",
+              "text": "Any day with sun ( for solar charging)"
+            },
+            {
+              "id": "c",
+              "text": "Friday ( for a super weekend)"
+            }
+          ],
+          "answer": "Any day with sun ( for solar charging)"
+        },
+        {
+          "question": "How does Martian Manhunter take his tea?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Telepathically sweetened"
+            },
+            {
+              "id": "b",
+              "text": "Green with envy"
+            },
+            {
+              "id": "c",
+              "text": "With a side of Mars-mallows"
+            }
+          ],
+          "answer": "With a side of Mars-mallows"
+        },
+        {
+          "question": "What does Aquaman say when he's feeling down?",
+          "options": [
+            {
+              "id": "a",
+              "text": "I need some fish therapy"
+            },
+            {
+              "id": "b",
+              "text": "I'm in over my head"
+            },
+            {
+              "id": "c",
+              "text": "Water you gonna do?"
+            }
+          ],
+          "answer": "I'm in over my head"
+        }
+      ]
+    }
+  ]
+}
