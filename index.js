@@ -6,8 +6,8 @@ const PORT = process.env.PORT || 1339;
 const app = express();
 const fs = require('fs-extra');
 
-const state = require('./lib/state');
-state.restore();
+// const state = require('./lib/state');
+// state.restore();
 
 app.use(bodyParser.json({ type: 'application/json' }));
 app.use(express.static('public'));
